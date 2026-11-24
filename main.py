@@ -30,6 +30,8 @@ def check_length(text: str) -> None:
             f"entry text is {n} characters; the gate allows "
             f"{MIN_CHARS} to {MAX_CHARS}"
         )
+    if not text.strip():
+        raise SystemExit("entry text must not be only white space")
 
 
 def main() -> None:
